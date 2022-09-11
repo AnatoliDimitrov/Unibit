@@ -1,0 +1,15 @@
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\bin\Debug\net6.0\MaxDistance.exe
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\bin\Debug\net6.0\MaxDistance.deps.json
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\bin\Debug\net6.0\MaxDistance.runtimeconfig.json
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\bin\Debug\net6.0\MaxDistance.dll
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\bin\Debug\net6.0\MaxDistance.pdb
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.csproj.AssemblyReference.cache
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.AssemblyInfoInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.AssemblyInfo.cs
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.csproj.CoreCompileInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.dll
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\refint\MaxDistance.dll
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.pdb
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\MaxDistance.genruntimeconfig.cache
+C:\Users\apdimitrov\Desktop\LogReader\MaxDistance\MaxDistance\obj\Debug\net6.0\ref\MaxDistance.dll
