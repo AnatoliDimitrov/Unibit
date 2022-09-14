@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PrimeNumber10001/1.0.0": {
+        "runtime": {
+          "PrimeNumber10001.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PrimeNumber10001/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

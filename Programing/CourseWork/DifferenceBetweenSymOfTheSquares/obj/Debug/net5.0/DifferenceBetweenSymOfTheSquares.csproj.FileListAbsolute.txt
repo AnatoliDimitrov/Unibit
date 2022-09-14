@@ -1,0 +1,16 @@
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.exe
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.deps.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.runtimeconfig.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.runtimeconfig.dev.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\bin\Debug\net5.0\DifferenceBetweenSymOfTheSquares.pdb
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.csproj.AssemblyReference.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.AssemblyInfoInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.AssemblyInfo.cs
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.csproj.CoreCompileInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\refint\DifferenceBetweenSymOfTheSquares.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.pdb
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\DifferenceBetweenSymOfTheSquares.genruntimeconfig.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\DifferenceBetweenSymOfTheSquares\obj\Debug\net5.0\ref\DifferenceBetweenSymOfTheSquares.dll

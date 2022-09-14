@@ -1,0 +1,16 @@
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.exe
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.deps.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.runtimeconfig.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.runtimeconfig.dev.json
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\bin\Debug\net5.0\PrimeNumber10001.pdb
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.csproj.AssemblyReference.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.AssemblyInfoInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.AssemblyInfo.cs
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.csproj.CoreCompileInputs.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\refint\PrimeNumber10001.dll
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.pdb
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\PrimeNumber10001.genruntimeconfig.cache
+C:\Users\apdimitrov\Desktop\LogReader\CourseWork\PrimeNumber10001\obj\Debug\net5.0\ref\PrimeNumber10001.dll

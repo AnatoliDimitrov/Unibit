@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MultplyBy3And5/1.0.0": {
+        "runtime": {
+          "MultplyBy3And5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MultplyBy3And5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

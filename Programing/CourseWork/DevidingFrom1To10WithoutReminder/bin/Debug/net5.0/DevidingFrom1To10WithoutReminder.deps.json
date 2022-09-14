@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DevidingFrom1To10WithoutReminder/1.0.0": {
+        "runtime": {
+          "DevidingFrom1To10WithoutReminder.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevidingFrom1To10WithoutReminder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
