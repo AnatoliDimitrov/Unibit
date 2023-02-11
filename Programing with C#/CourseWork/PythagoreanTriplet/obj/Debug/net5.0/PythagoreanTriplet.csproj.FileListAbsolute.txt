@@ -1,0 +1,16 @@
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.exe
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.deps.json
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.runtimeconfig.json
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.runtimeconfig.dev.json
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.dll
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\bin\Debug\net5.0\PythagoreanTriplet.pdb
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.csproj.AssemblyReference.cache
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.AssemblyInfoInputs.cache
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.AssemblyInfo.cs
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.csproj.CoreCompileInputs.cache
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.dll
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\refint\PythagoreanTriplet.dll
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.pdb
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\PythagoreanTriplet.genruntimeconfig.cache
+D:\GitHub\Unibit\Programing\CourseWork\PythagoreanTriplet\obj\Debug\net5.0\ref\PythagoreanTriplet.dll
