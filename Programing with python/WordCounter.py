@@ -5,6 +5,8 @@ myString = file.read()
 
 myString = re.sub('[^A-Za-z0-9 ]+', '', myString)
 
+print([*myString])
+
 textList = myString.split(" ")
 
 words = {}
@@ -14,9 +16,9 @@ for word in textList:
     wordCounter += 1
     if word not in words.keys():
         words[word] = 0
-    
+
     words[word] += 1
-    
+
 words = dict(sorted(words.items(), key=lambda x: x[1], reverse=True))
 
 open("result.txt", "w").close()
