@@ -1,0 +1,15 @@
+D:\UniBIT\Практикум програмиране\Курсова Работа\bin\Debug\net6.0\PracticumPrograming.exe
+D:\UniBIT\Практикум програмиране\Курсова Работа\bin\Debug\net6.0\PracticumPrograming.deps.json
+D:\UniBIT\Практикум програмиране\Курсова Работа\bin\Debug\net6.0\PracticumPrograming.runtimeconfig.json
+D:\UniBIT\Практикум програмиране\Курсова Работа\bin\Debug\net6.0\PracticumPrograming.dll
+D:\UniBIT\Практикум програмиране\Курсова Работа\bin\Debug\net6.0\PracticumPrograming.pdb
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.csproj.AssemblyReference.cache
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.GeneratedMSBuildEditorConfig.editorconfig
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.AssemblyInfoInputs.cache
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.AssemblyInfo.cs
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.csproj.CoreCompileInputs.cache
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.dll
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\refint\PracticumPrograming.dll
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.pdb
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\PracticumPrograming.genruntimeconfig.cache
+D:\UniBIT\Практикум програмиране\Курсова Работа\obj\Debug\net6.0\ref\PracticumPrograming.dll
