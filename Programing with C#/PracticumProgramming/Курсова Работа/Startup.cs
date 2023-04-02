@@ -47,10 +47,22 @@
 
                 string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
 
+                if (instructions.Length < 2)
+                {
+                    Console.WriteLine("Моля въведте поръчката във формата описан по-горе!");
+                    continue;
+                }
+
                 int table;
 
                 //// Handler for table number
-                if (!int.TryParse(instructions[0], out table) && table >= 1 && table <= 30)
+                if (!int.TryParse(instructions[0], out table))
+                {
+                    Console.WriteLine("Номера на масата може да бъде цяло число от 1 до 30 включително!");
+                    continue;
+                }
+
+                if (table < 1 || table > 30)
                 {
                     Console.WriteLine("Номера на масата може да бъде цяло число от 1 до 30 включително!");
                     continue;
@@ -95,7 +107,7 @@
                 string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
 
                 //// Handler for adding product successor
-                if (instructions.Length < 4)
+                if (instructions.Length != 4)
                 {
                     Console.WriteLine("Моля въведете ястието с правилен формат (пример: салата, Шопска салата, 350, 3.50)!");
                     continue;
@@ -137,17 +149,28 @@
                     continue;
                 }
 
+                //// Handler for already created product
+                if (currentProducts.Contains(name)) 
+                {
+                    Console.WriteLine("Ястие с това име вече присъства в базата!");
+                    continue;
+                }
+
                 //// Creating products
                 try
                 {
-                    if (type == "салата") products.Add(new Salad(name, grams, price));
-                    else if (type == "супа") products.Add(new Soup(name, grams, price));
-                    else if (type == "основно ястие") products.Add(new Dish(name, grams, price));
-                    else if (type == "десерт") products.Add(new Dessert(name, grams, price));
-                    else if (type == "напитка") products.Add(new Beverage(name, grams, price));
+                    if (type == Constants.Map[nameof(Salad)].ToLower()) products.Add(new Salad(name, grams, price));
+                    else if (type == Constants.Map[nameof(Soup)].ToLower()) products.Add(new Soup(name, grams, price));
+                    else if (type == Constants.Map[nameof(Dish)].ToLower()) products.Add(new Dish(name, grams, price));
+                    else if (type == Constants.Map[nameof(Dessert)].ToLower()) products.Add(new Dessert(name, grams, price));
+                    else if (type == Constants.Map[nameof(Beverage)].ToLower()) products.Add(new Beverage(name, grams, price));
                     else
                     {
-                        Console.WriteLine("Въведете една от опциите 'салата', 'супа', 'основно ястие', 'десерт' или 'напитка'.");
+                        Console.WriteLine($"Въведете една от опциите '{Constants.Map[nameof(Salad)].ToLower()}', " +
+                            $"'{Constants.Map[nameof(Soup)].ToLower()}', " +
+                            $"'{Constants.Map[nameof(Dish)].ToLower()}', " +
+                            $"'{Constants.Map[nameof(Dessert)].ToLower()}' " +
+                            $"или '{Constants.Map[nameof(Beverage)].ToLower()}'.");
                         continue;
                     }
 
@@ -191,7 +214,7 @@
 
             foreach (var name in set)
             {
-                Console.WriteLine($"   -   {Constants.Map[name]}: {orders.Count(p => p.GetType().Name == name)} - {orders.Where(p => p.GetType().Name == name).Sum(p => p.Price)}");
+                Console.WriteLine($"   -   {Constants.Map[name]}: {orders.Count(p => p.GetType().Name == name)} - {orders.Where(p => p.GetType().Name == name).Sum(p => p.Price).ToString("F2")}");
             }
         }
     }
