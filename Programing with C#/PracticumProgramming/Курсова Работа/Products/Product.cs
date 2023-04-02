@@ -2,6 +2,9 @@
 {
     using Contracts;
 
+    /// <summary>
+    /// Base class for all products
+    /// </summary>
     public abstract class Product : IProduct
     {
         private string _name;
@@ -41,6 +44,12 @@
             }
         }
 
+        /// <summary>
+        /// Method for calculating all Products objects
+        /// </summary>
+        /// <param name="quantity">Quantity in grams or mililiters</param>
+        /// <param name="coeficient">Coeficient for calculating the quantity</param>
+        /// <returns></returns>
         public virtual double CalculateCalories(double quantity, double coeficient)
         {
             return quantity * coeficient;

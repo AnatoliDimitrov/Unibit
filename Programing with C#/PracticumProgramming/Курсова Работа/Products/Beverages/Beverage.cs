@@ -2,6 +2,9 @@
 {
     using Contracts;
 
+    /// <summary>
+    /// Beverage class successor of product
+    /// </summary>
     public class Beverage : Product, IBeverage, ICalories
     {
         private double _mililiters;

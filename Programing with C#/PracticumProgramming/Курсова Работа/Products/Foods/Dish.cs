@@ -2,6 +2,9 @@
 {
     using Contracts;
 
+    /// <summary>
+    /// Dish class successor of Product
+    /// </summary>
     public class Dish : Product, IFood, ICalories
     {
         private double _grams;
