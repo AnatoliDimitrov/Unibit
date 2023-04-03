@@ -39,7 +39,7 @@
         }
 
         /// <summary>
-        /// Method for creating products that can be orderedfrom clients
+        /// Method for creating products that can be ordered from clients
         /// </summary>
         private static void InputProducts(string input)
         {
@@ -105,11 +105,7 @@
                 else if (type == Constants.Map[nameof(Beverage)].ToLower()) products.Add(new Beverage(name, grams, price));
                 else
                 {
-                    Console.WriteLine($"Въведете една от опциите '{Constants.Map[nameof(Salad)].ToLower()}', " +
-                        $"'{Constants.Map[nameof(Soup)].ToLower()}', " +
-                        $"'{Constants.Map[nameof(Dish)].ToLower()}', " +
-                        $"'{Constants.Map[nameof(Dessert)].ToLower()}' " +
-                        $"или '{Constants.Map[nameof(Beverage)].ToLower()}'.");
+                    Console.WriteLine($"Въведете една от опциите - {string.Join(", ", Constants.Map.Values.Select(x => x.ToLower()))}");
                     return;
                 }
 
