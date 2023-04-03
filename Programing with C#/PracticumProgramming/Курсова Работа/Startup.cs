@@ -14,175 +14,185 @@
 
         static void Main()
         {
-            InputProducts();
+            var input = "";
 
-            InputOrders();
+            Console.WriteLine("Добре дошли в ресторант \"ФАНТАЗИЯТА НА БИБЛИОТЕКРАКАТА\" - за изход напишете \"изход\".");
+            Console.WriteLine("Въведете ново ястие, поръчка или команда.");
+
+            while ((input = Console.ReadLine()).ToLower() != "изход")
+            {
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Моля въвдете команда!");
+                    continue;
+                }
+                if (Constants.Map.Values.Select(x => x.ToLower()).Contains(input.Split(", ", StringSplitOptions.RemoveEmptyEntries)[0]))
+                {
+                    InputProducts(input);
+                    continue;
+                }
+
+                InputOrders(input);
+            }
 
             PrintSales();
         }
 
         /// <summary>
-        /// Method for saving orders from clients in the program 
+        /// Method for creating products that can be orderedfrom clients
         /// </summary>
-        private static void InputOrders()
+        private static void InputProducts(string input)
         {
-            var input = "";
-            Console.WriteLine("Добре дошли в ресторант \"ФАНТАЗИЯТА НА БИБЛИОТЕКРАКАТА\" - за изход напишете \"изход\".");
-            Console.WriteLine("Моля въведете вашата поръчка във формат - 1, продукт1, продукт2, ...");
-            while ((input = Console.ReadLine()).ToLower() != "изход")
+            string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
+
+            //// Handler for adding product successor
+            if (instructions.Length != 4)
             {
-                //// Prints summary of the current state of the sales
-                if (input.ToLower() == "продажби")
+                Console.WriteLine("Моля въведете ястието с правилен формат (пример: салата, Шопска салата, 350, 3.50)!");
+                return;
+            }
+
+            var type = instructions[0];
+            var name = instructions[1];
+            double grams;
+            decimal price;
+
+            var correct = true;
+
+            //// Checks if the name contains only letters and white spaces
+            foreach (var character in name)
+            {
+                if (!char.IsLetter(character) && !char.IsWhiteSpace(character))
                 {
-                    PrintSales();
-                    continue;
+                    correct = false;
+                    break;
+                }
+            }
+
+            if (!correct)
+            {
+                Console.WriteLine("Името може да садържа само букви и интервали!");
+            }
+
+            //// Hadler for correct quantity
+            if (!double.TryParse(instructions[2], out grams))
+            {
+                Console.WriteLine("Въведете коректно количество!");
+                return;
+            }
+
+            //// Hadler for correct price
+            if (!decimal.TryParse(instructions[3], out price))
+            {
+                Console.WriteLine("Въведете коректна цена!");
+                return;
+            }
+
+            //// Handler for already created product
+            if (currentProducts.Contains(name))
+            {
+                Console.WriteLine("Ястие с това име вече присъства в базата!");
+                return;
+            }
+
+            //// Creating products
+            try
+            {
+                if (type == Constants.Map[nameof(Salad)].ToLower()) products.Add(new Salad(name, grams, price));
+                else if (type == Constants.Map[nameof(Soup)].ToLower()) products.Add(new Soup(name, grams, price));
+                else if (type == Constants.Map[nameof(Dish)].ToLower()) products.Add(new Dish(name, grams, price));
+                else if (type == Constants.Map[nameof(Dessert)].ToLower()) products.Add(new Dessert(name, grams, price));
+                else if (type == Constants.Map[nameof(Beverage)].ToLower()) products.Add(new Beverage(name, grams, price));
+                else
+                {
+                    Console.WriteLine($"Въведете една от опциите '{Constants.Map[nameof(Salad)].ToLower()}', " +
+                        $"'{Constants.Map[nameof(Soup)].ToLower()}', " +
+                        $"'{Constants.Map[nameof(Dish)].ToLower()}', " +
+                        $"'{Constants.Map[nameof(Dessert)].ToLower()}' " +
+                        $"или '{Constants.Map[nameof(Beverage)].ToLower()}'.");
+                    return;
                 }
 
-                //// Prints info of given product      
-                if (input.ToLower().StartsWith("инфо"))
-                {
-                    PrintProductInfo(input.Replace("инфо", "").Trim());
-                    continue;
-                }
-
-                string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
-
-                if (instructions.Length < 2)
-                {
-                    Console.WriteLine("Моля въведте поръчката във формата описан по-горе!");
-                    continue;
-                }
-
-                int table;
-
-                //// Handler for table number
-                if (!int.TryParse(instructions[0], out table))
-                {
-                    Console.WriteLine("Номера на масата може да бъде цяло число от 1 до 30 включително!");
-                    continue;
-                }
-
-                if (table < 1 || table > 30)
-                {
-                    Console.WriteLine("Номера на масата може да бъде цяло число от 1 до 30 включително!");
-                    continue;
-                }
-
-                if (!tables.ContainsKey(table))
-                {
-                    tables[table] = new Dictionary<string, int>();
-                }
-
-                for (int i = 1; i < instructions.Length; i++)
-                {
-                    var product = instructions[i];
-
-                    if (!currentProducts.Contains(product))
-                    {
-                        Console.WriteLine($"{product} не присъства в менюто и няма да бъде включен в поръчката!");
-                        continue;
-                    }
-
-                    if (!tables[table].ContainsKey(product))
-                    {
-                        tables[table].Add(product, 0);
-                    }
-
-                    tables[table][product]++;
-
-                    orders.Add(products.FirstOrDefault(p => p.Name == product));
-                }
+                currentProducts.Add(name);
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+                return;
             }
         }
 
         /// <summary>
-        /// Method for creating products that can be orderedfrom clients
+        /// Method for saving orders from clients in the program 
         /// </summary>
-        private static void InputProducts()
+        private static void InputOrders(string input)
         {
-            var input = "";
-            Console.WriteLine("Въвеждайте ястия и след като се готови напишете \"край\".");
-            while ((input = Console.ReadLine()).ToLower() != "край")
+            //// Prints summary of the current state of the sales
+            if (input.ToLower() == "продажби")
             {
-                string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
+                PrintSales();
+                return;
+            }
 
-                //// Handler for adding product successor
-                if (instructions.Length != 4)
+            //// Prints info of given product      
+            if (input.ToLower().StartsWith("инфо"))
+            {
+                PrintProductInfo(input.Replace("инфо", "").Trim());
+                return;
+            }
+
+            string[] instructions = input.Split(", ", StringSplitOptions.RemoveEmptyEntries);
+
+            if (instructions.Length < 2)
+            {
+                Console.WriteLine("Моля въвдете правилна команда!.");
+                Console.WriteLine(" - ястието във формат  - продукт, наименование, грамаж, цена!");
+                Console.WriteLine(" - поръчка във формат - 1, продукт1, продукт2, ...");
+                Console.WriteLine(" - или една от командите \"инфо\" или \"продажби\"");
+                return;
+            }
+
+            int table;
+
+            //// Handler for table number
+            if (!int.TryParse(instructions[0], out table))
+            {
+                Console.WriteLine($"Ястията могат да бъдат една от опциите - {string.Join(", ", Constants.Map.Values.Select(x => x.ToLower()))}!");
+                return;
+            }
+
+            if (table < 1 || table > 30)
+            {
+                Console.WriteLine("Номера на масата може да бъде цяло число от 1 до 30 включително!");
+                return;
+            }
+
+            if (!tables.ContainsKey(table))
+            {
+                tables[table] = new Dictionary<string, int>();
+            }
+
+            for (int i = 1; i < instructions.Length; i++)
+            {
+                var product = instructions[i];
+
+                if (!currentProducts.Contains(product))
                 {
-                    Console.WriteLine("Моля въведете ястието с правилен формат (пример: салата, Шопска салата, 350, 3.50)!");
+                    Console.WriteLine($"{product} не присъства в менюто и няма да бъде включен в поръчката!");
                     continue;
                 }
 
-                var type = instructions[0];
-                var name = instructions[1];
-                double grams;
-                decimal price;
-
-                var correct = true;
-
-                //// Checks if the name contains only letters and white spaces
-                foreach (var character in name)
+                if (!tables[table].ContainsKey(product))
                 {
-                    if (!char.IsLetter(character) && !char.IsWhiteSpace(character))
-                    {
-                        correct = false;
-                        break;
-                    }
+                    tables[table].Add(product, 0);
                 }
 
-                if (!correct)
-                {
-                    Console.WriteLine("Името може да садържа само букви и интервали!");
-                }
+                tables[table][product]++;
 
-                //// Hadler for correct quantity
-                if (!double.TryParse(instructions[2], out grams))
-                {
-                    Console.WriteLine("Въведете коректно количество!");
-                    continue;
-                }
-
-                //// Hadler for correct price
-                if (!decimal.TryParse(instructions[3], out price))
-                {
-                    Console.WriteLine("Въведете коректна цена!");
-                    continue;
-                }
-
-                //// Handler for already created product
-                if (currentProducts.Contains(name)) 
-                {
-                    Console.WriteLine("Ястие с това име вече присъства в базата!");
-                    continue;
-                }
-
-                //// Creating products
-                try
-                {
-                    if (type == Constants.Map[nameof(Salad)].ToLower()) products.Add(new Salad(name, grams, price));
-                    else if (type == Constants.Map[nameof(Soup)].ToLower()) products.Add(new Soup(name, grams, price));
-                    else if (type == Constants.Map[nameof(Dish)].ToLower()) products.Add(new Dish(name, grams, price));
-                    else if (type == Constants.Map[nameof(Dessert)].ToLower()) products.Add(new Dessert(name, grams, price));
-                    else if (type == Constants.Map[nameof(Beverage)].ToLower()) products.Add(new Beverage(name, grams, price));
-                    else
-                    {
-                        Console.WriteLine($"Въведете една от опциите '{Constants.Map[nameof(Salad)].ToLower()}', " +
-                            $"'{Constants.Map[nameof(Soup)].ToLower()}', " +
-                            $"'{Constants.Map[nameof(Dish)].ToLower()}', " +
-                            $"'{Constants.Map[nameof(Dessert)].ToLower()}' " +
-                            $"или '{Constants.Map[nameof(Beverage)].ToLower()}'.");
-                        continue;
-                    }
-
-                    currentProducts.Add(name);
-                }
-                catch (ArgumentException e)
-                {
-                    Console.WriteLine(e.Message);
-                    continue;
-                }
+                orders.Add(products.FirstOrDefault(p => p.Name == product));
             }
         }
+
 
         /// <summary>
         /// Method for printing info for given product
